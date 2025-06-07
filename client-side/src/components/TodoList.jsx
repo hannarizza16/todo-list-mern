@@ -47,9 +47,9 @@ export default function TodoList() {
 
   return (
     <>
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 px-4 py-10 text-xl">
-      <span className="text-5xl font-bold text-center text-gray-900 mb-8">To Do List</span>
-      <div className="w-full max-w-2xl p-6 bg-gray-100 border border-gray-200 rounded-lg shadow-2xl sm:p-6 "> {/*dark:bg-green-100 dark:border-gray-300 */}
+    <div className="main">
+      <span className="todolist-name">To Do List</span>
+      <div className="todolist-section"> {/*dark:bg-green-100 dark:border-gray-300 */}
 
         {/* Input tasks */}
         <div className="flex items-center justify-center">
@@ -63,9 +63,9 @@ export default function TodoList() {
                 }
               }}
             placeholder="Enter a new task"
-            className="border border-gray-300 rounded-md p-1 mr-1 focus:outline-none focus:ring-1 focus:ring-blue-400"
+            className="input-box"
           />
-          <button onClick={handleAddTask} className="text-black hover:text-green-800 cursor-pointer "><CirclePlus size={18}/></button>
+          <button onClick={handleAddTask} className="circle-plus-btn"><CirclePlus size={20}/></button>
         </div>
 
         {/* Show all tasks */}
@@ -98,8 +98,8 @@ export default function TodoList() {
                       />
                     </div>
                     <div className="flex items-center space-x-1">
-                      <button onClick={() => handleSaveEdit(task._id)} className="text-green-500 hover:text-green-700 cursor-pointer"><Check size={15}/></button>
-                      <button onClick={handleCancelEdit} className="text-red-500 hover:text-red-700 cursor-pointer"><X size={15}/></button>
+                      <button onClick={() => handleSaveEdit(task._id)} className="text-green-500 hover:text-green-700 cursor-pointer"><Check size={20}/></button>
+                      <button onClick={handleCancelEdit} className="text-red-500 hover:text-red-700 cursor-pointer"><X size={20}/></button>
                     </div>
                     
                   </>
@@ -112,8 +112,8 @@ export default function TodoList() {
                       </span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <button onClick={() => handleEditClick(task)} className="text-yellow-500 hover:text-yellow-600 cursor-pointer"><Pencil size={15}/></button>
-                      <button type="button" onClick={() => handleDeleteTask(task._id)}className="text-black hover:text-red-600 cursor-pointer" ><Trash2 size={15}/></button>
+                      <button onClick={() => handleEditClick(task)} className="text-yellow-500 hover:text-yellow-600 cursor-pointer"><Pencil size={20}/></button>
+                      <button type="button" onClick={() => handleDeleteTask(task._id)}className="text-black hover:text-red-600 cursor-pointer" ><Trash2 size={20}/></button>
                     </div>
                     
                   </>
