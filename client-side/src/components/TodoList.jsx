@@ -47,9 +47,9 @@ export default function TodoList() {
 
   return (
     <>
-    <div className="flex flex-col items-center justify-center min-h-screen">
-      <span className="text-3xl font-bold text-center text-gray-900 ">To Do List</span>
-      <div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow-2xl sm:p-6 dark:bg-gray-100 dark:border-gray-300">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 px-4 py-10 text-xl">
+      <span className="text-5xl font-bold text-center text-gray-900 mb-8">To Do List</span>
+      <div className="w-full max-w-2xl p-6 bg-gray-100 border border-gray-200 rounded-lg shadow-2xl sm:p-6 "> {/*dark:bg-green-100 dark:border-gray-300 */}
 
         {/* Input tasks */}
         <div className="flex items-center justify-center">
