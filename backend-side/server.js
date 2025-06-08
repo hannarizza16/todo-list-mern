@@ -10,13 +10,17 @@ const app = express()
 
 // TO DO: create dotenv file and add the port number
 const PORT = process.env.PORT
+const allowedOrigin = [
+  'https://todolist-fullstack-mern.netlify.app'
+];
 
 // Middlewares
 app.use(express.json())
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: allowedOrigin,
   credentials: true // allows the front end to send Cookies HTTP Authentication (like basic auth) Client-side SSL certificates
 }))  
+
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
