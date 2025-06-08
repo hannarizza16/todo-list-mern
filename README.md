@@ -2,6 +2,15 @@
 
 A full-stack to do list built using MERN (MongoDB, Express, React, Node.js) stack. This simple app allows the user to **add**, **edit** and **delete** tasks.
 
+Link: [To Do App](todolist-fullstack-mern.netlify.app)
+
+# Features
+- Add Task
+- Edit Task 
+- Delete Task
+- Marking your task as done
+
+
 # Installation
 
 ## Clone the repository 
@@ -14,7 +23,7 @@ A full-stack to do list built using MERN (MongoDB, Express, React, Node.js) stac
 git clone git@github.com:hannarizza16/todo-list-mern.git
  ```
 
- ## Backend Setup (Node.js + Express + MongoDB)
+ ### Backend Setup (Node.js + Express + MongoDB)
  1. go to backend folder 
  ```bash
 cd backend-side
@@ -36,7 +45,7 @@ npm install
   npm run dev
  ```
 
- ## Frontend Setup  
+ ### Frontend Setup  
  1. Open a new terminal
  ```bash
  cd client-side
@@ -54,7 +63,7 @@ npm install
 
  # Dependencies (Packages)
 
- ## Backend (Node.js + Express + MongoDB)
+ ### Backend (Node.js + Express + MongoDB)
  These are the packages that I have in my project 
 
  1. express (v4.18.2) - web framework for Node.js
@@ -76,7 +85,7 @@ npm install
   npm install express mongoose dotenv cors nodemon mongodb
  ``` 
 
-## Frontend (Vite-React)
+### Frontend (Vite-React)
 
 1. react (v19.0.0)
 
@@ -98,3 +107,19 @@ npm install
  ```bash
   npm install react react-dom react-router-dom axios tailwindcss @tailwindcss/forms @tailwindcss/vite lucide-react
  ``` 
+
+### Deployment
+- Frontend: [Netlify](https://www.netlify.com/)
+- Backend: [Render](https://render.com/)
+
+## Tech Stack
+### Frontend
+- **React**: For building the user interface.
+- **Vite**: For fast development and build tooling.
+- **Tailwind CSS**: For styling the app.
+
+### Backend
+- **Node.js**: For server-side JavaScript.
+- **Express**: For building the RESTful API.
+- **MongoDB**: For storing tasks in a NoSQL database.
+- **Mongoose**: For object data modeling (ODM).
