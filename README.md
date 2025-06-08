@@ -2,7 +2,7 @@
 
 A full-stack to do list built using MERN (MongoDB, Express, React, Node.js) stack. This simple app allows the user to **add**, **edit** and **delete** tasks.
 
-Link: [To Do App](todolist-fullstack-mern.netlify.app)
+Link: [To Do App](https://todolist-fullstack-mern.netlify.app/todolist)
 
 # Features
 - Add Task
