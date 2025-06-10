@@ -11,7 +11,7 @@ const app = express()
 // TO DO: create dotenv file and add the port number
 const PORT = process.env.PORT
 
-const allowedOrigins = ['https://todolist-fullstack-mern.netlify.app'];
+const allowedOrigins = ['https://todolist-fullstack-mern.netlify.app', 'http://localhost:5173'];
 
 
 // Middlewares
