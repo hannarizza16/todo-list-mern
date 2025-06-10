@@ -4,7 +4,7 @@ import { TodoListContext } from "../../contexts/TodoListContext.jsx"
 import { Pencil, Trash2, Check, X, CirclePlus } from 'lucide-react'
 
 export default function TodoList() {
-  const { state, addTask, deleteTask, editTask, toggleTaskCompletion, capitalizeFirstLetter } = useContext(TodoListContext)
+  const { state, addTask, deleteTask, editTask, toggleTaskCompletion, capitalizeFirstLetter, loading, error } = useContext(TodoListContext)
   const { tasks } = state
 
   const [newTaskTitle, setNewTaskTitle] = useState("")
@@ -70,7 +70,14 @@ export default function TodoList() {
 
         {/* Show all tasks */}
         <div>
-          {tasks.length === 0 ? (
+          {loading ? (
+            <div className="flex justify-center items-center h-32">
+              <div className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+            </div>
+
+           ) : error ? (
+              <div className="text-red-500 text-center">{error}</div>
+           ) : tasks.length === 0 ? (
             <p className="text-red-500 pt-5">No task listed</p>
           ) : (
             /////////////////////////
@@ -121,6 +128,7 @@ export default function TodoList() {
               </div>
             ))
           )}
+
         </div>
       </div>
     </div>

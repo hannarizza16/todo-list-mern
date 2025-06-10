@@ -1,4 +1,4 @@
-import { createContext, useReducer, useEffect } from 'react'
+import { createContext, useReducer, useEffect, useState } from 'react'
 import { initialState, todoListReducer } from '../reducers/todoListReducers.js'
 import axios from 'axios'
 import { ACTION_TYPES } from '../action_types/actionType.js'
@@ -8,6 +8,8 @@ export const TodoListContext = createContext()
 export function TodoListProvider({ children }) {
 
     const [state, dispatch] = useReducer(todoListReducer, initialState)
+    const [loading, setLoading] = useState(true)
+    const [error, setError] = useState(null) 
 
     const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
 
@@ -25,6 +27,9 @@ export function TodoListProvider({ children }) {
             })
         } catch (error) {
             console.error("Error fetching tasks:", error);
+            setError('Failed to fetch data, Please try again later')
+        } finally {
+            setLoading(false)
         }
     };
 
@@ -99,7 +104,9 @@ export function TodoListProvider({ children }) {
             deleteTask,
             editTask,
             toggleTaskCompletion,
-            capitalizeFirstLetter
+            capitalizeFirstLetter,
+            error,
+            loading
             }}>
 
             {children}
